@@ -1,0 +1,277 @@
+/* Reset default browser CSS.
+Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
+:focus {outline: 0;}
+
+ol, ul {list-style: none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+a img {border: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+
+body{
+    background: #fff;
+    color: #333;
+    font: 13px/1.5 "メイリオ","Meiryo",arial,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+}
+
+/* Eka's Overrides
+*****************************************************/
+
+#charname {
+    display: none;
+}
+
+table {
+    background-color: white;
+    border-collapse: initial;
+    border-spacing: initial;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/* Typography
+*****************************************************/
+
+.title {
+    background: url(//galateaofcyprus.github.io/marunomia/marus-maid-cafe/img/post_title.png) no-repeat 0 0;
+    color: #000;
+    font-size: 18px;
+    font-weight:bold;
+    height:46px;
+    padding: 68px 0 0 35px;
+    width:602px;
+}
+
+.last {
+    margin-bottom: 0 !important;
+}
+
+/* Link Styling
+*****************************************************/
+
+a {
+    background: transparent;
+    color: #313131;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+
+    /* If link is text, make pink on hover/active. */
+    a:hover, a:active {
+        color: #e7519c;
+        cursor: pointer;
+        outline: none;
+    }
+
+    /* If link is image, adjust opacity for hover-over effect. */
+    a:hover img {
+        opacity: 0.8;
+    }
+
+/* Layout
+*****************************************************/
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+}
+
+#wrap_contents {
+    display: flex;
+    justify-content: center;
+}
+
+#wrap_contents, .inner, #bottom_contents {
+    margin: 0 auto;
+    width:880px;
+}
+
+
+/* HEADER
+*****************************************************/
+
+#header_container {
+    padding-top: 20px;
+}
+
+#header_contents {
+    align-items: center;
+    background: url(//galateaofcyprus.github.io/marunomia/marus-maid-cafe/img/hd_bg.png) repeat-x 0 0;
+    border-bottom: 2px solid rgba(136, 112, 17, .75);
+    display: flex;
+    height:221px;
+    overflow: hidden;
+    text-align: center;
+}
+
+    #header_contents h2 {
+        clear: both;
+        padding: 20px 0 26px;
+    }
+
+
+/* Main Content
+*****************************************************/
+
+#main_contents {
+    font-size: 15px;
+    padding: 8px 0 28px;
+    width:627px;
+}
+
+.post {
+    background: #fff;
+    border: 1px #CEC1B9 solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+    .post p {
+        margin-bottom: 15px;
+    }
+
+    .post img {
+        border: 1px #ccc solid;
+        height: auto;
+        width: 250px;
+        /* height: 330px; */
+    }
+
+    .post table {
+        border: 1px #ccc solid;
+        border-collapse: collapse;
+        color: rgb(51, 51, 51);
+        font-size: 15px;
+        }
+
+        .post table th {
+        background: #efede7;
+        border: #ccc solid;
+        border-width: 0 0 1px 1px;
+        padding: 10px;
+        }
+
+        .post table td {
+        background: #fff;
+        border: 1px #ccc solid;
+        border-width: 0 0 1px 1px;
+        padding: 10px;
+        vertical-align: middle;
+        }
+
+        #basic_info {
+            max-width: 310px;
+            min-height: 377px;
+        }
+
+            #basic_info th {
+                vertical-align: middle;
+            }
+
+        #bio {
+            margin: 20px 0 0;
+        }
+
+            #bio th {
+                text-align: center;
+                width: 30px;
+            }
+
+        #fate {
+            margin-top: 20px;
+        }
+
+            #fate th {
+                text-align: center;
+            }
+
+
+/* Footer
+*****************************************************/
+
+/* Jump to Top
+----------------------------------*/
+#pagetop {
+    clear: both;
+    font-size: 85%;
+    margin: 0 auto;
+    padding: 0 0 25px;
+    text-align: right;
+    width: 880px;
+}
+    #pagetop a {
+        padding-left:12px;
+    }
+        #pagetop a:hover {
+            background-position: 2px 4px;
+        }
+
+/* General
+----------------------------------*/
+#footer {
+    margin-top: auto;
+}
+
+#footer_contents {
+    background: url(//galateaofcyprus.github.io/marunomia/marus-maid-cafe/img/ft_bg.png) repeat-x 0 0;
+    clear: both;
+}
+
+    #footer_contents .inner {
+        border-top:#D0C3BC solid 1px;
+        color: #000;
+        line-height:1.3;
+        padding: 35px 0 20px;
+    }
+
+    #footer_contents .logo {
+        padding-bottom: 20px;
+        text-align: center;
+        width:100%;
+    }
+
+/* Footer Contact Info
+----------------------------------*/
+    #footer_contents .info {
+        font-size: 15px;
+        text-align: center;
+    }
+
+/* Copyright Blackbar
+----------------------------------*/
+#copyright {
+    background: rgb(29, 29, 29);
+    clear: both;
+    color: white;
+    font-size: 15px;
+    line-height:45px;
+    text-align: center;
+}
+
+    #copyright a {
+        color: white;
+    }
+
+        #copyright a:hover, a:active {
+            color: #e7519c;
+            cursor: pointer;
+            outline: none;
+        }

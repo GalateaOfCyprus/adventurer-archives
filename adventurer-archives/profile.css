@@ -1,0 +1,632 @@
+/* Reset default browser CSS.
+Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
+:focus {outline: 0;}
+
+ol, ul {list-style: none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+a img {border: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+
+body{
+    background: #fff;
+    color: #333;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Eka's Overrides
+*****************************************************/
+
+#charname {
+    display: none;
+}
+
+table {
+    background-color: white;
+    border-collapse: initial;
+    border-spacing: initial;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/* General Setup
+*****************************************************/
+
+.background-gradient {
+    background: -moz-linear-gradient(top, #e2e9f6 39%, #2d4d76 100%);
+    background: -webkit-linear-gradient(top, #e2e9f6 39%, #2d4d76 100%);
+    background: -o-linear-gradient(top, #e2e9f6 39%, #2d4d76 100%);
+    background: -ms-linear-gradient(top, #e2e9f6 39%, #2d4d76 100%);
+    background: linear-gradient(top, #e2e9f6 39%, #2d4d76 100%);
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Deactivate body flex behavior when window width < optimal display width to avoid left-side overflow while scrolling. */
+@media only screen and (max-width: 1400px) {
+    body {
+        display: inline-block;
+    }
+}
+
+#wrapper {
+    min-width: 1075px;
+    max-width: 1400px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Header & Nav
+*****************************************************/
+
+/* Header
+----------------------------------*/
+
+header {
+    height: 40px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 60%;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+#return-to-main {
+    height: 30px;
+    padding-top: 15px;
+    background-color: rgb(17, 46, 81);
+    border-bottom: 20px solid rgb(32, 84, 147);
+    color: white;
+    text-align: center;
+}
+
+/* "Back to Top" Arrow
+----------------------------------*/
+
+a.back-to-top {
+    background-color:#2D4D76;
+    color:white;
+}
+
+@media only screen and (min-width: 768px) {
+    a.back-to-top {
+        position: fixed;
+        bottom: 2em;
+        right: 2em;
+        text-indent: -7500px;
+        height: 74px;
+        width: 74px;
+        background: url(//galateaofcyprus.github.io/marunomia/adventurer-archives/img/top.png) no-repeat bottom center;
+        display: none;
+        z-index: 1000;
+        outline: 0;
+    }
+
+    a.back-to-top:hover, .back-to-top:active, .back-to-top:focus {
+        background: url(//galateaofcyprus.github.io/marunomia/adventurer-archives/img/top.png) no-repeat top center;
+        outline: 0;
+        color:white;
+    }
+}
+
+/* Content Layout
+*****************************************************/
+
+.content-wrapper {
+    display: flex;
+}
+
+/* Main Column
+----------------------------------*/
+
+.content__main-col {
+    width: 75%;
+    padding: 15px;
+    background-color: white;
+    border-bottom-left-radius: 6px;
+}
+
+/* Extra Image Support
+----------------------------------*/
+
+.xtra-images {
+    margin-top: 15px;
+}
+
+    .xtra-images__header
+     {
+        height: 45px;
+        padding-left: 15px;
+        display: flex;
+        align-items: center;
+        color: white;
+        background-color: #205493;
+    }
+
+.thumbnail-gallery-4row {
+    margin-top: 15px;
+    display: flex;
+}
+
+.thumbnail-container {
+    width: 22%;
+    height: fit-content;
+    padding: .5% .5%;
+    background-color: rgb(248, 247, 243);
+    border: 1px solid #aaa;
+    border-radius: 2px;
+}
+
+    .thumbnail-container:not(:first-child) {
+        margin-left: 2.5%;
+    }
+
+    .thumbnail-container a {
+        color: inherit;
+    }
+
+        .thumbnail-container a:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+
+    .thumbnail-container img {
+        width: 100%;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #99988d;
+    }
+
+.thumbnail-caption {
+    margin: 7.5px 0 0 !important;
+    font: 12px "Source Sans Pro", sans-serif !important;
+    line-height: 130% !important;
+}
+
+/* Right Sidebar
+----------------------------------*/
+
+.content__sidebar {
+    width: 25%;
+    padding: 15px 15px 0;
+    background-color: rgb(241, 241, 241);
+    border-radius: 0 0 6px 0;
+}
+
+    .content__sidebar h2 {
+        margin: 20px 0 12px;
+        padding-bottom: 4px;
+        border-bottom: 1px dotted #aaa;
+        font: 300 24px "Merriweather", serif !important;
+    }
+
+.profile-img {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.boxed {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #d2ccb3;
+    border-radius: 6px;
+    background-color: #f8f7f3;
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 25%);
+    font-size: 1em;
+}
+
+    .boxed > * {
+        color: rgb(85, 85, 85);
+    }
+
+    .boxed h2 {
+        margin-top: 0;
+    }
+
+    .boxed table {
+        width: 100%;
+        background-color: inherit;
+    }
+
+        .boxed table tr:not(:first-child) th, .boxed table tr:not(:first-child) td {
+            padding-top: 5px;
+        }
+
+        .boxed table th {
+            width: 35%;
+            text-align: right;
+        }
+
+        .boxed table td {
+            padding-left: 30px;
+        }
+
+/* Footer
+*****************************************************/
+
+footer {
+    margin: 50px 0 20px;
+    text-align: center;
+    color: white;
+}
+
+    footer h4 {
+        color: lightgrey;
+        font-weight: bolder;
+    }
+
+    footer a {
+        color: white !important;
+    }
+
+        footer a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+/* DD 214 Grid Layout
+*****************************************************/
+
+.dd214 > div {
+    padding: 0 5px;
+    border: 1px solid black;
+}
+
+    .dd214 > div > h3, .dd214 > div > h4 {
+        text-align: center;
+    }
+
+    .dd214 > div > h5 {
+        padding-top: 2px;
+        font-size: 12px;
+    }
+
+    .dd214 > div > p {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+.Awards > p {
+    margin: 0;
+}
+
+.dd214 {
+    box-shadow: 5px 5px 3px rgb(0 0 0 / 25%);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px 20px auto 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px auto 20px 20px 20px 20px;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Header Header Header Header Header Header Header Header Header Header Header Header Header Header Header"
+    "Header Header Header Header Header Header Header Header Header Header Header Header Header Header Header"
+    "P1Header P1Header P1Header P1Header P1Header P1Header P1Header P1Header P1Header P1Header P1Header P1Header P1Header P1Header P1Header"
+    "Name Name Name Name Name Name Name Aliases Aliases Aliases Aliases Aliases ID ID ID"
+    "Name Name Name Name Name Name Name Aliases Aliases Aliases Aliases Aliases ID ID ID"
+    "Birthday Birthday Birthday Age Age Age Branch Branch Branch Branch Branch Branch Branch Branch Branch"
+    "Birthday Birthday Birthday Age Age Age Branch Branch Branch Branch Branch Branch Branch Branch Branch"
+    "Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio"
+    "Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio"
+    "P2Header P2Header P2Header P2Header P2Header P2Header P2Header P2Header P2Header P2Header P2Header P2Header P2Header P2Header P2Header"
+    "TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks AptitudeHeader AptitudeHeader AptitudeHeader Excel Avg Poor"
+    "TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks Attr1 Attr1 Attr1 Attr1AExcel Attr1Avg Attr1Poor"
+    "TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks Attr2 Attr2 Attr2 Attr2Excel Attr2Avg Attr2Poor"
+    "TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks Attr3 Attr3 Attr3 Attr3Excel Attr3Avg Attr3Poor"
+    "TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks Attr4 Attr4 Attr4 Attr4Excel Attr4Avg Attr4Poor"
+    "TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks Attr5 Attr5 Attr5 Attr5Excel Attr5Avg Attr5Poor"
+    "TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks Attr6 Attr6 Attr6 Attr6Excel Attr6Avg Attr6Poor"
+    "TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks Attr7 Attr7 Attr7 Attr7Excel Attr7Avg Attr7Poor"
+    "TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks Attr8 Attr8 Attr8 Attr8Excel Attr8Avg Attr8Poor"
+    "TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks TesterRemarks Attr9 Attr9 Attr9 Attr9Excel Attr9Avg Attr9Poor"
+    "AcademyCommissionHeader AcademyCommissionHeader AcademyCommissionHeader AcademyCommissionHeader AcademyCommissionHeader AcademyCommissionHeader AcademyCommissionHeader AcademyCommissionHeader AcademyCommissionHeader AcademyCommissionHeader AcademyCommissionHeader AcCommYesFill AcCommYes AcCommNoFill AcCommNo"
+    "P3Header P3Header P3Header P3Header P3Header P3Header P3Header P3Header P3Header P3Header P3Header P3Header P3Header P3Header P3Header"
+    "QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete Awards Awards Awards Awards Awards Awards"
+    "QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete Awards Awards Awards Awards Awards Awards"
+    "QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete Awards Awards Awards Awards Awards Awards"
+    "QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete Awards Awards Awards Awards Awards Awards"
+    "QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete Awards Awards Awards Awards Awards Awards"
+    "QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete QuestsComplete Awards Awards Awards Awards Awards Awards"
+    "P4Header P4Header P4Header P4Header P4Header P4Header P4Header P4Header P4Header P4Header P4Header P4Header P4Header P4Header P4Header"
+    "DischargeType DischargeType DischargeType DischargeType DischargeType DischargeDate DischargeDate DischargeDate DischargeDate MethodOfConfirmationHeader MethodOfConfirmationHeader MethodOfConfirmationHeader MethodOfConfirmationHeader MethodOfConfirmationHeader MethodOfConfirmationHeader"
+    "DischargeType DischargeType DischargeType DischargeType DischargeType DischargeDate DischargeDate DischargeDate DischargeDate MoCPartyFill MoCParty MoCBodyFill MoCBody MoCOtherFill MoCOther"
+    "FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks"
+    "FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks"
+    "FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks"
+    "FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks"
+    "FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks FateRemarks";
+}
+
+.Header { grid-area: Header; }
+.P1Header { grid-area: P1Header; }
+.Name { grid-area: Name; }
+.Aliases { grid-area: Aliases; }
+.ID { grid-area: ID; }
+.Age { grid-area: Age; }
+.Birthday { grid-area: Birthday; }
+.Branch { grid-area: Branch; }
+.Bio { grid-area: Bio; }
+.P2Header { grid-area: P2Header; }
+.TesterRemarks { grid-area: TesterRemarks; }
+.AptitudeHeader { grid-area: AptitudeHeader; }
+.Excel { grid-area: Excel; }
+.Avg { grid-area: Avg; }
+.Poor { grid-area: Poor; }
+.Attr1 { grid-area: Attr1; }
+.Attr2 { grid-area: Attr2; }
+.Attr3 { grid-area: Attr3; }
+.Attr4 { grid-area: Attr4; }
+.Attr5 { grid-area: Attr5; }
+.Attr6 { grid-area: Attr6; }
+.Attr7 { grid-area: Attr7; }
+.Attr8 { grid-area: Attr8; }
+.Attr9 { grid-area: Attr9; }
+.Attr1AExcel { grid-area: Attr1AExcel; }
+.Attr1Avg { grid-area: Attr1Avg; }
+.Attr1Poor { grid-area: Attr1Poor; }
+.Attr2Excel { grid-area: Attr2Excel; }
+.Attr2Avg { grid-area: Attr2Avg; }
+.Attr2Poor { grid-area: Attr2Poor; }
+.Attr3Excel { grid-area: Attr3Excel; }
+.Attr3Avg { grid-area: Attr3Avg; }
+.Attr3Poor { grid-area: Attr3Poor; }
+.Attr4Excel { grid-area: Attr4Excel; }
+.Attr4Avg { grid-area: Attr4Avg; }
+.Attr4Poor { grid-area: Attr4Poor; }
+.Attr5Excel { grid-area: Attr5Excel; }
+.Attr5Avg { grid-area: Attr5Avg; }
+.Attr5Poor { grid-area: Attr5Poor; }
+.Attr6Excel { grid-area: Attr6Excel; }
+.Attr6Avg { grid-area: Attr6Avg; }
+.Attr6Poor { grid-area: Attr6Poor; }
+.Attr7Excel { grid-area: Attr7Excel; }
+.Attr7Avg { grid-area: Attr7Avg; }
+.Attr7Poor { grid-area: Attr7Poor; }
+.Attr8Excel { grid-area: Attr8Excel; }
+.Attr8Avg { grid-area: Attr8Avg; }
+.Attr8Poor { grid-area: Attr8Poor; }
+.Attr9Excel { grid-area: Attr9Excel; }
+.Attr9Avg { grid-area: Attr9Avg; }
+.Attr9Poor { grid-area: Attr9Poor; }
+.AcademyCommissionHeader { grid-area: AcademyCommissionHeader; }
+.AcCommYes { grid-area: AcCommYes; }
+.AcCommNo { grid-area: AcCommNo; }
+.AcCommYesFill { grid-area: AcCommYesFill; }
+.AcCommNoFill { grid-area: AcCommNoFill; }
+.P3Header { grid-area: P3Header; }
+.QuestsComplete { grid-area: QuestsComplete; }
+.Awards { grid-area: Awards; }
+.P4Header { grid-area: P4Header; }
+.DischargeType { grid-area: DischargeType; }
+.DischargeDate { grid-area: DischargeDate; }
+.MethodOfConfirmationHeader { grid-area: MethodOfConfirmationHeader; }
+.MoCParty { grid-area: MoCParty; }
+.MoCPartyFill { grid-area: MoCPartyFill; }
+.MoCBody { grid-area: MoCBody; }
+.MoCBodyFill { grid-area: MoCBodyFill; }
+.MoCOther { grid-area: MoCOther; }
+.MoCOtherFill { grid-area: MoCOtherFill; }
+.FateRemarks { grid-area: FateRemarks; }
+
+/* Lightbox
+*****************************************************/
+
+body.lb-disable-scrolling {
+    overflow: hidden;
+  }
+
+  .lightboxOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: black;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8;
+    display: none;
+  }
+
+  .lightbox {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    text-align: center;
+    line-height: 0;
+    font-weight: normal;
+    outline: none;
+  }
+
+  .lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    max-height: none;
+    border-radius: 3px;
+
+    /* Image border */
+    border: 4px solid white;
+  }
+
+  .lightbox a img {
+    border: none;
+  }
+
+  .lb-outerContainer {
+    position: relative;
+    *zoom: 1;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 4px;
+
+    /* Background color behind image.
+       This is visible during transitions. */
+    background-color: white;
+  }
+
+  .lb-outerContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .lb-loader {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    line-height: 0;
+  }
+
+  .lb-cancel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url(//galateaofcyprus.github.io/marunomia/common/img/lightbox_load.gif) no-repeat;
+  }
+
+  .lb-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .lb-container > .nav {
+    left: 0;
+  }
+
+  .lb-nav a {
+    outline: none;
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+  }
+
+  .lb-prev, .lb-next {
+    height: 100%;
+    cursor: pointer;
+    display: block;
+  }
+
+  .lb-nav a.lb-prev {
+    width: 34%;
+    left: 0;
+    float: left;
+    background: url(//galateaofcyprus.github.io/marunomia/common/img/lightbox_prev.png) left 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+  }
+
+  .lb-nav a.lb-prev:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
+
+  .lb-nav a.lb-next {
+    width: 64%;
+    right: 0;
+    float: right;
+    background: url(//galateaofcyprus.github.io/marunomia/common/img/lightbox_next.png) right 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+  }
+
+  .lb-nav a.lb-next:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
+
+  .lb-dataContainer {
+    margin: 0 auto;
+    padding-top: 5px;
+    *zoom: 1;
+    width: 100%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .lb-dataContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .lb-data {
+    padding: 0 4px;
+    color: #ccc;
+  }
+
+  .lb-data .lb-details {
+    width: 85%;
+    float: left;
+    text-align: left;
+    line-height: 1.1em;
+  }
+
+  .lb-data .lb-caption {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1em;
+  }
+
+  .lb-data .lb-caption a {
+    color: #4ae;
+  }
+
+  .lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: #999999;
+  }
+
+  .lb-data .lb-close {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url(//galateaofcyprus.github.io/marunomia/common/img/lightbox_close.png) top right no-repeat;
+    text-align: right;
+    outline: none;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+
+  .lb-data .lb-close:hover {
+    cursor: pointer;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
