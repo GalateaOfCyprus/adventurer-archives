@@ -35,6 +35,10 @@ function hideBackToTopArrow(){
   }
 }
 
+//////////////
+// LIGHTBOX //
+//////////////
+
 // https://stackoverflow.com/a/13382873
 function getScrollbarWidth() {
 
@@ -59,19 +63,15 @@ function getScrollbarWidth() {
 
 }
 
-/*!
-* Lightbox v2.11.3
-* by Lokesh Dhakar
-*
-* More info:
-* http://lokeshdhakar.com/projects/lightbox2/
-*
-* Copyright Lokesh Dhakar
-* Released under the MIT license
-* https://github.com/lokesh/lightbox2/blob/master/LICENSE
-*
-* @preserve
-*/
+// Lightbox v2.11.3
+// by Lokesh Dhakar
+
+// More info:
+// http://lokeshdhakar.com/projects/lightbox2/
+
+// Copyright Lokesh Dhakar
+// Released under the MIT license
+// https://github.com/lokesh/lightbox2/blob/master/LICENSE
 
 // Uses Node, AMD or browser globals to create a module.
 (function (root, factory) {
