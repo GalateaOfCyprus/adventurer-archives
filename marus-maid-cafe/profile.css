@@ -13,93 +13,93 @@ a img {border: 0;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
 
 body{
-    background: #fff;
-    color: #333;
-    font: 13px/1.5 "メイリオ","Meiryo",arial,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+  background: #fff;
+  color: #333;
+  font: 13px/1.5 "メイリオ","Meiryo",arial,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
 }
 
 /* Eka's Overrides
 *****************************************************/
 
 #charname {
-    display: none;
+  display: none;
 }
 
 table {
-    background-color: white;
-    border-collapse: initial;
-    border-spacing: initial;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+  background-color: white;
+  border-collapse: initial;
+  border-spacing: initial;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 /* Typography
 *****************************************************/
 
 .title {
-    background: url(//claimtobeaplayer.github.io/marunomia/marus-maid-cafe/img/post_title.png) no-repeat 0 0;
-    color: #000;
-    font-size: 18px;
-    font-weight:bold;
-    height:46px;
-    padding: 68px 0 0 35px;
-    width:602px;
+  background: url(//claimtobeaplayer.github.io/marunomia/marus-maid-cafe/img/post_title.png) no-repeat 0 0;
+  color: #000;
+  font-size: 18px;
+  font-weight:bold;
+  height:46px;
+  padding: 68px 0 0 35px;
+  width:602px;
 }
 
 .last {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 /* Link Styling
 *****************************************************/
 
 a {
-    background: transparent;
-    color: #313131;
-    font-size: 100%;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    text-decoration: none;
-    vertical-align: baseline;
+  background: transparent;
+  color: #313131;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: baseline;
 }
 
-    /* If link is text, make pink on hover/active. */
-    a:hover, a:active {
-        color: #e7519c;
-        cursor: pointer;
-        outline: none;
-    }
+/* If link is text, make pink on hover/active. */
+a:hover, a:active {
+  color: #e7519c;
+  cursor: pointer;
+  outline: none;
+}
 
-    /* If link is image, adjust opacity for hover-over effect. */
-    a:hover img {
-        opacity: 0.8;
-    }
+/* If link is image, adjust opacity for hover-over effect. */
+a:hover img {
+  opacity: 0.8;
+}
 
 /* Layout
 *****************************************************/
 
 html, body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 #wrapper {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
 }
 
 #wrap_contents {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #wrap_contents, .inner, #bottom_contents {
-    margin: 0 auto;
-    width:880px;
+  margin: 0 auto;
+  width:880px;
 }
 
 
@@ -107,101 +107,105 @@ html, body {
 *****************************************************/
 
 #header_container {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 #header_contents {
-    align-items: center;
-    background: url(//claimtobeaplayer.github.io/marunomia/marus-maid-cafe/img/hd_bg.png) repeat-x 0 0;
-    border-bottom: 2px solid rgba(136, 112, 17, .75);
-    display: flex;
-    height:221px;
-    overflow: hidden;
-    text-align: center;
+  align-items: center;
+  background: url(//claimtobeaplayer.github.io/marunomia/marus-maid-cafe/img/hd_bg.png) repeat-x 0 0;
+  border-bottom: 2px solid rgba(136, 112, 17, .75);
+  display: flex;
+  height:221px;
+  overflow: hidden;
+  text-align: center;
 }
 
-    #header_contents h2 {
-        clear: both;
-        padding: 20px 0 26px;
-    }
+#header_contents h2 {
+  clear: both;
+  padding: 20px 0 26px;
+}
 
 
 /* Main Content
 *****************************************************/
 
 #main_contents {
-    font-size: 15px;
-    padding: 8px 0 28px;
-    width:627px;
+  font-size: 15px;
+  padding: 8px 0 28px;
+  width:627px;
+}
+
+[data-lightbox] {
+  display: contents;
+}
+
+#propic {
+  width: 250px;
 }
 
 .post {
-    background: #fff;
-    border: 1px #CEC1B9 solid;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 20px;
+  border: 1px #CEC1B9 solid;
+  background: #fff;
+  padding: 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-    .post p {
-        margin-bottom: 15px;
-    }
+.post img, .post table, .post table th, .post table td {
+  border: 1px #ccc solid;
+}
 
-    .post img {
-        border: 1px #ccc solid;
-        height: auto;
-        width: 250px;
-        /* height: 330px; */
-    }
+.post p {
+  margin-bottom: 15px;
+}
 
-    .post table {
-        border: 1px #ccc solid;
-        border-collapse: collapse;
-        color: rgb(51, 51, 51);
-        font-size: 15px;
-        }
+.post table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  color: rgb(51, 51, 51);
+  font-size: 15px;
+}
 
-        .post table th {
-        background: #efede7;
-        border: #ccc solid;
-        border-width: 0 0 1px 1px;
-        padding: 10px;
-        }
+.post table th, .post table td {
+  padding: 10px;
+}
 
-        .post table td {
-        background: #fff;
-        border: 1px #ccc solid;
-        border-width: 0 0 1px 1px;
-        padding: 10px;
-        vertical-align: middle;
-        }
+.post table th {
+  background: #efede7;
+}
 
-        #basic_info {
-            max-width: 310px;
-            min-height: 377px;
-        }
+.post table td {
+  vertical-align: middle;
+}
 
-            #basic_info th {
-                vertical-align: middle;
-            }
+#basic_info {
+  max-width: 310px;
+  margin: 0;
+}
 
-        #bio {
-            margin: 20px 0 0;
-        }
+#basic_info th {
+  vertical-align: middle;
+}
 
-            #bio th {
-                text-align: center;
-                width: 30px;
-            }
+#bio th, #fate th {
+  width: 30px;
+  text-align: center;
+}
 
-        #fate {
-            margin-top: 20px;
-        }
+.thumbnail-gallery-4row:not(:first-child) {
+  margin-top: 20px;
+}
 
-            #fate th {
-                text-align: center;
-            }
+.ximg {
+  width: 130px;
+  vertical-align: top;
+}
+
+.ximg:not(.last) {
+  margin-right: 13.9px;
+}
 
 
 /* Footer
@@ -210,277 +214,277 @@ html, body {
 /* Jump to Top
 ----------------------------------*/
 #pagetop {
-    clear: both;
-    font-size: 85%;
-    margin: 0 auto;
-    padding: 0 0 25px;
-    text-align: right;
-    width: 880px;
+  clear: both;
+  font-size: 85%;
+  margin: 0 auto;
+  padding: 0 0 25px;
+  text-align: right;
+  width: 880px;
 }
-    #pagetop a {
-        padding-left:12px;
-    }
-        #pagetop a:hover {
-            background-position: 2px 4px;
-        }
+#pagetop a {
+  padding-left:12px;
+}
+#pagetop a:hover {
+  background-position: 2px 4px;
+}
 
 /* General
 ----------------------------------*/
 #footer {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 #footer_contents {
-    background: url(//claimtobeaplayer.github.io/marunomia/marus-maid-cafe/img/ft_bg.png) repeat-x 0 0;
-    clear: both;
+  background: url(//claimtobeaplayer.github.io/marunomia/marus-maid-cafe/img/ft_bg.png) repeat-x 0 0;
+  clear: both;
 }
 
-    #footer_contents .inner {
-        border-top:#D0C3BC solid 1px;
-        color: #000;
-        line-height:1.3;
-        padding: 35px 0 20px;
-    }
+#footer_contents .inner {
+  border-top:#D0C3BC solid 1px;
+  color: #000;
+  line-height:1.3;
+  padding: 35px 0 20px;
+}
 
-    #footer_contents .logo {
-        padding-bottom: 20px;
-        text-align: center;
-        width:100%;
-    }
+#footer_contents .logo {
+  padding-bottom: 20px;
+  text-align: center;
+  width:100%;
+}
 
 /* Footer Contact Info
 ----------------------------------*/
-    #footer_contents .info {
-        font-size: 15px;
-        text-align: center;
-    }
+#footer_contents .info {
+  font-size: 15px;
+  text-align: center;
+}
 
 /* Copyright Blackbar
 ----------------------------------*/
 #copyright {
-    background: rgb(29, 29, 29);
-    clear: both;
-    color: white;
-    font-size: 15px;
-    line-height:45px;
-    text-align: center;
+  background: rgb(29, 29, 29);
+  clear: both;
+  color: white;
+  font-size: 15px;
+  line-height:45px;
+  text-align: center;
 }
 
-    #copyright a {
-        color: white;
-    }
+#copyright a {
+  color: white;
+}
 
-        #copyright a:hover, a:active {
-            color: #e7519c;
-            cursor: pointer;
-            outline: none;
-        }
+#copyright a:hover, a:active {
+  color: #e7519c;
+  cursor: pointer;
+  outline: none;
+}
 
 
 /* Lightbox
 *****************************************************/
 
 body.lb-disable-scrolling {
-    overflow: hidden;
-  }
+  overflow: hidden;
+}
 
-  .lightboxOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    background-color: black;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-    opacity: 0.8;
-    display: none;
-  }
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
+}
 
-  .lightbox {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    z-index: 10000;
-    text-align: center;
-    line-height: 0;
-    font-weight: normal;
-    outline: none;
-  }
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+  outline: none;
+}
 
-  .lightbox .lb-image {
-    display: block;
-    height: auto;
-    max-width: inherit;
-    max-height: none;
-    border-radius: 3px;
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  border-radius: 3px;
 
-    /* Image border */
-    border: 4px solid white;
-  }
+  /* Image border */
+  border: 4px solid white;
+}
 
-  .lightbox a img {
-    border: none;
-  }
+.lightbox a img {
+  border: none;
+}
 
-  .lb-outerContainer {
-    position: relative;
-    *zoom: 1;
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-    border-radius: 4px;
+.lb-outerContainer {
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
 
-    /* Background color behind image.
-       This is visible during transitions. */
-    background-color: white;
-  }
+  /* Background color behind image.
+  This is visible during transitions. */
+  background-color: white;
+}
 
-  .lb-outerContainer:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .lb-loader {
-    position: absolute;
-    top: 43%;
-    left: 0;
-    height: 25%;
-    width: 100%;
-    text-align: center;
-    line-height: 0;
-  }
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
 
-  .lb-cancel {
-    display: block;
-    width: 32px;
-    height: 32px;
-    margin: 0 auto;
-    background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_load.gif) no-repeat;
-  }
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_load.gif) no-repeat;
+}
 
-  .lb-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-  }
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
 
-  .lb-container > .nav {
-    left: 0;
-  }
+.lb-container > .nav {
+  left: 0;
+}
 
-  .lb-nav a {
-    outline: none;
-    background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
-  }
+.lb-nav a {
+  outline: none;
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
 
-  .lb-prev, .lb-next {
-    height: 100%;
-    cursor: pointer;
-    display: block;
-  }
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
 
-  .lb-nav a.lb-prev {
-    width: 34%;
-    left: 0;
-    float: left;
-    background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_prev.png) left 48% no-repeat;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
-    -webkit-transition: opacity 0.6s;
-    -moz-transition: opacity 0.6s;
-    -o-transition: opacity 0.6s;
-    transition: opacity 0.6s;
-  }
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_prev.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
 
-  .lb-nav a.lb-prev:hover {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-  }
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
 
-  .lb-nav a.lb-next {
-    width: 64%;
-    right: 0;
-    float: right;
-    background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_next.png) right 48% no-repeat;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
-    -webkit-transition: opacity 0.6s;
-    -moz-transition: opacity 0.6s;
-    -o-transition: opacity 0.6s;
-    transition: opacity 0.6s;
-  }
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_next.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
 
-  .lb-nav a.lb-next:hover {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-  }
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
 
-  .lb-dataContainer {
-    margin: 0 auto;
-    padding-top: 5px;
-    *zoom: 1;
-    width: 100%;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
 
-  .lb-dataContainer:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .lb-data {
-    padding: 0 4px;
-    color: #ccc;
-  }
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;
+}
 
-  .lb-data .lb-details {
-    width: 85%;
-    float: left;
-    text-align: left;
-    line-height: 1.1em;
-  }
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
 
-  .lb-data .lb-caption {
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 1em;
-  }
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
 
-  .lb-data .lb-caption a {
-    color: #4ae;
-  }
+.lb-data .lb-caption a {
+  color: #4ae;
+}
 
-  .lb-data .lb-number {
-    display: block;
-    clear: left;
-    padding-bottom: 1em;
-    font-size: 12px;
-    color: #999999;
-  }
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999;
+}
 
-  .lb-data .lb-close {
-    display: block;
-    float: right;
-    width: 30px;
-    height: 30px;
-    background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_close.png) top right no-repeat;
-    text-align: right;
-    outline: none;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-    opacity: 0.7;
-    -webkit-transition: opacity 0.2s;
-    -moz-transition: opacity 0.2s;
-    -o-transition: opacity 0.2s;
-    transition: opacity 0.2s;
-  }
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
 
-  .lb-data .lb-close:hover {
-    cursor: pointer;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-  }
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
