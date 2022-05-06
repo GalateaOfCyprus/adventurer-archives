@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Oswald&display=swap');
+
+/* Reset default browser CSS.
+Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
+:focus {outline: 0;}
+
+ol, ul {list-style: none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+a img {border: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+
+body{
+    background: #fff;
+    color: #202020;
+    font-family: 'Noto Serif', serif;
+}
+
+/* Eka's Overrides
+*****************************************************/
+
+#charname {
+    display: none;
+}
+
+table {
+    background-color: white;
+    color: #202020;
+}
+
+/* Utility Classes
+*****************************************************/
+
+.theme-bg {
+    background-color: #9D2235;
+}
+
+.white {
+    color: white;
+}
+
+.bebas {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: .1em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bebas-squish {
+    letter-spacing: 0;
+}
+
+.content-center {
+    width: 1280px;
+    margin-left: 48px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.flex {display: flex;}
+
+.vertical-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+/* General Setup
+*****************************************************/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-width: 1105px;
+    line-height: 1.5;
+}
+
+#wrapper {
+    position: relative;
+    min-height: 100%;
+}
+
+#content {
+    padding-bottom: 80px;
+}
+
+p {
+    margin-bottom: 18px;
+    font: 18px 'Noto Serif', serif;
+    text-transform: none;
+}
+
+h1 {
+    margin: 0.67em 0;
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+
+h3 {
+    margin-bottom: 24px;
+    font-size: 32px;
+}
+
+/* Header
+*****************************************************/
+
+header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    height: 103px;
+}
+
+#logo {
+    width: 150px;
+    height: 70px;
+    background-color: white;
+}
+
+header h2 {
+    margin: 0 36px;
+    line-height: 66px;
+}
+
+.header__sup-links {
+    margin: 0 36px;
+    width: 100%;
+}
+
+.header__sup-links-container {
+    justify-content: flex-end;
+}
+
+.header__sup-links a {
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
+.header__sup-links a:hover {
+    padding-bottom: 2px;
+    border-bottom: #f2a900 3px solid;
+    color: white;
+}
+
+/* Profile
+*****************************************************/
+
+/* Pictures */
+
+.content__propic {
+    margin: 68px 86.5px 0 0;
+    border-top: #f2a900 4px solid;
+}
+
+.content__propic img {
+    border: #202020 1px solid;
+}
+
+.content__propic .propic-container img {
+    margin-top: 15px;
+    width: 315px;
+}
+
+.ximg-container {
+    margin-top: 7.5px;
+    width: 315px;
+    column-count: 2;
+    column-gap: 15px;
+}
+
+.ximg-container img {
+    margin-bottom: 8px;
+    width: 150px;
+}
+
+/* Text */
+
+.content__text {
+    margin-right: 96px;
+    min-width: 557px;
+}
+
+.content__text > h3:not(:first-of-type) {
+    margin-top: 48px;
+}
+
+/* Basic Info Table */
+
+#basic-info table {
+    width: 45%;
+}
+
+#basic-info th, td {
+    padding: 0 15px 15px 0;
+    font-size: 18px;
+}
+
+#basic-info td {
+    text-align: right;
+    text-transform: none;
+}
+
+/* Footer
+*****************************************************/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    font: 15px/45px "メイリオ","Meiryo",arial,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;;
+}
+
+/* Lightbox
+*****************************************************/
+
+[data-lightbox] {
+    display: contents;
+}
+
+body.lb-disable-scrolling {
+    overflow: hidden;
+}
+
+.lightboxOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: black;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8;
+    display: none;
+}
+
+.lightbox {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    text-align: center;
+    line-height: 0;
+    font-weight: normal;
+    outline: none;
+}
+
+.lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    max-height: none;
+    border-radius: 3px;
+
+    /* Image border */
+    border: 4px solid white;
+}
+
+.lightbox a img {
+    border: none;
+}
+
+.lb-outerContainer {
+    position: relative;
+    *zoom: 1;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 4px;
+
+    /* Background color behind image.
+    This is visible during transitions. */
+    background-color: white;
+}
+
+.lb-outerContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.lb-loader {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    line-height: 0;
+}
+
+.lb-cancel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_load.gif) no-repeat;
+}
+
+.lb-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.lb-container > .nav {
+    left: 0;
+}
+
+.lb-nav a {
+    outline: none;
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+.lb-prev, .lb-next {
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+.lb-nav a.lb-prev {
+    width: 34%;
+    left: 0;
+    float: left;
+    background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_prev.png) left 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.lb-nav a.lb-next {
+    width: 64%;
+    right: 0;
+    float: right;
+    background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_next.png) right 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.lb-dataContainer {
+    margin: 0 auto;
+    padding-top: 5px;
+    *zoom: 1;
+    width: 100%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.lb-data {
+    padding: 0 4px;
+    color: #ccc;
+}
+
+.lb-data .lb-details {
+    width: 85%;
+    float: left;
+    text-align: left;
+    line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+    color: #4ae;
+}
+
+.lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: #999999;
+}
+
+.lb-data .lb-close {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url(//claimtobeaplayer.github.io/marunomia/@common/img/lightbox_close.png) top right no-repeat;
+    text-align: right;
+    outline: none;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:hover {
+    cursor: pointer;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
