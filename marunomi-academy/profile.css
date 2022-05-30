@@ -57,6 +57,10 @@ table {
     letter-spacing: 0;
 }
 
+.wide-p {
+    width: calc(100% + 413px);
+}
+
 .content-center {
     width: 1280px;
     margin-left: 48px;
@@ -66,7 +70,9 @@ table {
     text-align: center;
 }
 
-.flex {display: flex;}
+.flex {
+    display: flex;
+}
 
 .vertical-center {
     align-items: center;
