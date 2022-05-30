@@ -139,13 +139,16 @@ header {
 }
 
 #logo {
-    width: 150px;
     height: 70px;
-    background-color: white;
+}
+
+#logo img {
+    height: 70px;
 }
 
 header h2 {
     margin: 0 36px;
+    min-width: 300px;
     line-height: 66px;
 }
 
