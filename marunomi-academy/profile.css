@@ -241,6 +241,10 @@ footer {
     font: 15px/45px "メイリオ","Meiryo",arial,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;;
 }
 
+footer a {
+    color: white;
+}
+
 /* Lightbox
 *****************************************************/
 
