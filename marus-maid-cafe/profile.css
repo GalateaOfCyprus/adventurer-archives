@@ -82,6 +82,7 @@ a:hover img {
 
 html, body {
   height: 100%;
+  min-width: 900px;
   width: 100%;
 }
 
