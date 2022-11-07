@@ -47,7 +47,7 @@ table {
   width:602px;
 }
 
-.last {
+p:last-of-type {
   margin-bottom: 0 !important;
 }
 
