@@ -57,10 +57,6 @@ table {
     letter-spacing: 0;
 }
 
-.wide-p {
-    width: calc(100% + 413px);
-}
-
 .content-center {
     width: 1280px;
     margin-left: 48px;
@@ -178,7 +174,8 @@ header h2 {
 /* Pictures */
 
 .content__propic {
-    margin: 68px 86.5px 0 0;
+    float: right;
+    margin: 68px 0 30px 60px;
     border-top: #f2a900 4px solid;
 }
 
@@ -204,8 +201,12 @@ header h2 {
     width: 150px;
 }
 
-/* Stupid Safari hack to keep the margins looking as they should. */
+/* Stupid Safari hack to keep the margins looking as they should. Apparently Safari adds 5px to the bottom margins.*/
 @supports (-webkit-hyphens: none) {
+    .content__propic {
+        margin-bottom: 25px;
+    }
+
     .ximg-container img {
         display: inline-block;
         margin-bottom: 8px;
@@ -215,6 +216,7 @@ header h2 {
 /* Text */
 
 .content__text {
+    text-align: justify;
     margin-right: 96px;
     min-width: 557px;
 }
