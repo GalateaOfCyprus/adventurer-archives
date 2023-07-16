@@ -199,9 +199,18 @@ header h2 {
 }
 
 .ximg-container img {
-    margin-bottom: 8px;
+    display: block;
+    margin-bottom: 13px;
     width: 150px;
 }
+
+/* Stupid Safari hack to keep the margins looking as they should. */
+@supports (-webkit-hyphens: none) {
+    .ximg-container img {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+  }
 
 /* Text */
 
