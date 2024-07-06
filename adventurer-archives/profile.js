@@ -42,6 +42,11 @@ function hideBackToTopArrow(){
 // https://stackoverflow.com/a/13382873
 function getScrollbarWidth() {
 
+  // Check if content does not overflow viewport height (no scrollbar)
+  if (document.body.scrollHeight <= window.innerHeight) {
+    return 0;
+  }
+
   // Creating invisible container
   const outer = document.createElement('div');
   outer.style.visibility = 'hidden';
