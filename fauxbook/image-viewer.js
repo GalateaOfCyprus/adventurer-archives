@@ -6,7 +6,7 @@ function enableImageViewer() {
 }
 
 function enableOpenImageViewer() {
-    $('.photo').click(function() {
+    $('.photo, .view-more').click(function() {
         // .photo elements have an ID like "#img-link_{idOfLinkedImgViewer}"
         const idOfImageViewerToOpen = $(this).attr('id').substr(9);
 

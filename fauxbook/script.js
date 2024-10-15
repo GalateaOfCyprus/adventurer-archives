@@ -113,6 +113,7 @@ function buildSkeletonDOM() {
                             <!-- Built programmatically based on .image-viewer elements. -->
                         </div>
                     </div>
+                    <div class="copyright center-text">Built by <a href="./ClaimToBeAPlayer">ClaimToBeAPlayer</a></div>
                 </div>
                 <div class="right-column">
                     <!-- Built programmatically from .post elements above. -->
@@ -302,6 +303,38 @@ function createImgPostContents() {
             $byline.after(photoHtml);
         }
 
+        // If >1 comments, show only the top comment and add a "view more" btn.
+        const $comments = $placeholderPost.find('.comment');
+        if ($comments.length > 1) {
+
+            // Find the top comment
+            // const $comments = $placeholderPost.find('.comment');
+            let $topComment = null;
+            let maxReactions = -1;
+
+            $comments.each(function() {
+                const $comment = $(this);
+                const reactionCount = parseInt($comment.find('.reaction-icons .reaction-count').text(), 10);
+                if (reactionCount > maxReactions) {
+                    maxReactions = reactionCount;
+                    $topComment = $comment;
+                }
+            });
+
+            // Remove all but the top comment
+            $comments.not($topComment).remove();
+
+            // Create the "View more comments" element
+            const viewMoreCommentsHtml = `
+                <div id="img-link_${matchingImageViewerID}" class="view-more">
+                    View more comments
+                </div>
+            `;
+
+            // Prepend the "View more comments" element to the .comment-section
+            $placeholderPost.find('.comments-section').prepend(viewMoreCommentsHtml);
+        }
+
         // If there are no likes/comments, set margin-bottom on the photo to 0.
         const $photo = $placeholderPost.find('.photo');
         if (!$placeholderPost.children('.engagement').length
@@ -400,6 +433,7 @@ function switchSection() {
         $(".album-contents").remove();
 
         // Bring us back to the "Tagged" photo lineup.
+        selectNavItem($("#photos-nav--tagged"));
         generateSelectedPhotoNavTab($("#photos-nav--tagged"));
 
         // This contains photo/album lineups and is hidden if viewing an album.
@@ -454,7 +488,9 @@ function populatePhotosNavTabGallery(photoNavTabToDisplay) {
 
         if (imgAlbum === photoNavTabToDisplay // Album matches tab, e.g. "tagged"
         || (photoNavTabToDisplay === "photos" // Viewing main girl's posted imgs
-            && imgPostedBy === mainGirlName)) {
+            && imgPostedBy === mainGirlName)
+        || (photoNavTabToDisplay === "tagged" // Any img not posted by main girl
+            && imgPostedBy !== mainGirlName)) {
             addImgToPhotosLineup($(this), $photoLineup);
         }
     });
